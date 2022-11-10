@@ -1,0 +1,21 @@
+{
+  "functions": [
+    {
+      "id": "UKRTRANSLIT",
+      "name": "UKRTRANSLIT",
+      "description": "Create proper transliteration of Ukrainian names",
+      "result": {
+        "type": "string",
+        "dimensionality": "string"
+      },
+      "parameters": [
+        {
+          "name": "string",
+          "description": "String to transliteration",
+          "type": "string",
+          "dimensionality": "string"
+        }
+      ]
+    }
+  ]
+}

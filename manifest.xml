@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+          xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+          xsi:type="TaskPaneApp">
+  <Id>bdb0c148-86d1-4789-ae6a-3e5fb97a61b5</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Kyrylo Zakhatov</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Ukrainian Transliteration Plugin" />
+  <Description DefaultValue="Transliterate Ukrainian names"/>
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="CustomFunctionsRuntime" MinVersion="1.1"/>
+    </Sets>
+  </Requirements>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://amice13.github.io/ms-translit/index.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <AllFormFactors>
+          <ExtensionPoint xsi:type="CustomFunctions">
+            <Script>
+              <SourceLocation resid="Funcjs" />
+            </Script>
+            <Page>
+              <SourceLocation resid="Funchtml"/>
+            </Page>
+            <Metadata>
+              <SourceLocation resid="Funcmeta"/>
+            </Metadata>
+            <Namespace resid="Funcns" />
+          </ExtensionPoint>
+        </AllFormFactors>        
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Urls>
+        <bt:Url id="Funcjs" DefaultValue="https://amice13.github.io/ms-translit/custom-functions.js" />
+        <bt:Url id="Funchtml" DefaultValue="https://amice13.github.io/ms-translit/index.html" />
+        <bt:Url id="Funcmeta" DefaultValue="https://amice13.github.io/ms-translit/custom-functions.json" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Funcns" DefaultValue="TEST" />
+      </bt:ShortStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

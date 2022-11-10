@@ -1,0 +1,28 @@
+{
+    "functions": [
+        {
+            "description": "Replaces all latin symbols to cyryllic.",
+            "id": "REPLACEALLLATIN",
+            "name": "REPLACEALLLATIN",
+            "parameters": [
+                {
+                    "name": "s",
+                    "type": "any"
+                }
+            ],
+            "result": {}
+        },
+        {
+            "description": "Transliterates Ukrainain names to latin.",
+            "id": "TRANSLIT",
+            "name": "TRANSLIT",
+            "parameters": [
+                {
+                    "name": "s",
+                    "type": "any"
+                }
+            ],
+            "result": {}
+        }
+    ]
+}
